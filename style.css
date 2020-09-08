@@ -19,6 +19,7 @@ h1 {
   color: #40ffe2;
   background-color: white;
   padding: 20px;
+  margin: 0px 200px;
   border-radius: 15px;
 }
 
@@ -178,11 +179,53 @@ button:active {
     height: fit-content;
   }
 
+  h1 {
+    font-size: 2.5rem;
+    padding: 20px;
+    margin: 0px 200px;
+    margin-top: 25px;
+  }
+
+  button {
+    margin-bottom: 25px;
+  }
+
   #game {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 350px;
+    height: fit-content;
+    padding: 50px;
+    background-color: #eed3ee;
+    border-radius: 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  html, body {
+    height: fit-content;
+  }
+
+  h1 {
+    font-family: 'Kufam', cursive;
+    font-size: 1.5rem;
+    color: #40ffe2;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  button {
+    margin-bottom: 20px;
+  }
+
+  #game {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 175px;
     height: fit-content;
     padding: 50px;
     background-color: #eed3ee;
