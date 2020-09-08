@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kufam:wght@900&family=Roboto:wght@400;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1efff;
+}
+
+h1 {
+  font-family: 'Kufam', cursive;
+  font-size: 3.5rem;
+  color: #40ffe2;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+h2 {
+  font-family: 'Kufam', cursive;
+  color: rgb(233, 91, 169);
+}
+
+#game {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 850px;
+  height: fit-content;
+  margin: 50px 200px;
+  padding: 50px;
+  background-color: #eed3ee;
+  border-radius: 25px;
+}
+
+#game .scene-div {
+  width: 150px;
+  height: 200px;
+  perspective: 600px;
+  margin: 10px;
+}
+
+.card-container {
+  width: 150px;
+  height: 200px;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card-face {
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+.card-front {
+  background-color: #dcfffa;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fefffe' fill-opacity='0.61' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.card-back {
+  background: blue;
+  transform: rotateY( 180deg );
+}
+
+.red-back {
+  background: red;
+  transform: rotateY( 180deg );
+}
+
+.blue-back {
+  background: blue;
+  transform: rotateY( 180deg );
+}
+.green-back {
+  background: green;
+  transform: rotateY( 180deg );
+}
+
+.orange-back {
+  background: orange;
+  transform: rotateY( 180deg );
+}
+
+.purple-back {
+  background: purple;
+  transform: rotateY( 180deg );
+}
+
+.red-back {
+  background: red;
+  transform: rotateY( 180deg );
+}
+
+.card-container.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.win-container {
+  position: fixed;
+  position: fixed;
+  /* center the element */
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 250px;
+  height: fit-content;
+  padding: 50px;
+  background-color: white;
+  border: 8px solid #40ffe2;
+  border-radius: 25px;
+  box-shadow: 5px 10px #02020250;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-family: 'Kufam', cursive;
+  font-size: 2rem;
+  color: rgb(233, 91, 169);
+  margin: 2px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.9rem;
+  height: 5rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background: rgb(233, 91, 169);
+  outline: none;
+  padding: 0.5rem 1.8rem;
+  box-shadow: 0 0.3rem rgba(160, 167, 189, 0.65);
+  font-weight: 700;
+}
+
+button:hover {
+  filter: brightness(220%);
+}
+
+button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, .65);
+}
+
+#exit-button {
+  padding: 0px 10px;
+  height: 2.5rem;
+  position: relative;
+  left: 135px;
+  top: -25px;
+}
+
+/* Helpers functions */
+.hidden {
+  display: none !important;
+}
+
+/* Mobile */
+@media screen and (max-width: 800px) {
+
+  html, body {
+    height: fit-content;
+  }
+
+  #game {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 350px;
+    height: fit-content;
+    padding: 50px;
+    background-color: #eed3ee;
+    border-radius: 25px;
+  }
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memory Game!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Memory Game!</h1>
+    <h2>Best Score: <span id="best-score-display">0</span></h2>
+    <div id="game" class="hidden">
+
+    </div>
+    <h2 id="cardsCounterElement" class="hidden">Cards Flipped: <span id="flipped-cards-display">0</span></h1>
+    <button id="playBtn">Play!</button>
+    <button id="restartBtn" class="hidden">Restart</button>
+
+    <!-- You win! -->
+    <div id="win-container" class="win-container hidden">
+      <button id="exit-button">X</button>
+      <h3>You win!</h3>
+      <button id="playAgainBtn">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
