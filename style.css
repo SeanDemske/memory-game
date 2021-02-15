@@ -2,15 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Kufam:wght@900&family=Roboto:wght@400;700&display=swap');
 
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1efff;
+  box-sizing: border-box;
+}
+
+.app-container {
+  height: max-content;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f1efff;
+}
+
+button {
+  width: max-content;
 }
 
 h1 {
@@ -21,11 +31,13 @@ h1 {
   padding: 20px;
   margin: 0px 200px;
   border-radius: 15px;
+  text-align: center;
 }
 
 h2 {
   font-family: 'Kufam', cursive;
   color: rgb(233, 91, 169);
+  text-align: center;
 }
 
 #game {
@@ -33,8 +45,7 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   width: 850px;
-  height: fit-content;
-  margin: 50px 200px;
+  margin: 50px 0px;
   padding: 50px;
   background-color: #eed3ee;
   border-radius: 25px;
@@ -110,14 +121,14 @@ h2 {
 
 .win-container {
   position: fixed;
-  position: fixed;
   /* center the element */
   right: 0;
   left: 0;
+  bottom: 50%;
   margin-right: auto;
   margin-left: auto;
   width: 250px;
-  height: fit-content;
+  height: max-content;
   padding: 50px;
   background-color: white;
   border: 8px solid #40ffe2;
@@ -159,6 +170,10 @@ button:active {
   box-shadow: 0 0.1rem rgba(255, 255, 255, .65);
 }
 
+button:focus {
+  filter: brightness(220%);
+}
+
 #exit-button {
   padding: 0px 10px;
   height: 2.5rem;
@@ -173,11 +188,7 @@ button:active {
 }
 
 /* Mobile */
-@media screen and (max-width: 800px) {
-
-  html, body {
-    height: fit-content;
-  }
+@media screen and (max-width: 900px) {
 
   h1 {
     font-size: 2.5rem;
@@ -194,19 +205,22 @@ button:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 350px;
-    height: fit-content;
+    width: 510px;
+    height: max-content;
     padding: 50px;
     background-color: #eed3ee;
     border-radius: 25px;
   }
 }
 
-@media screen and (max-width: 420px) {
-
-  html, body {
-    height: fit-content;
+@media screen and (max-width: 600px) {
+  #game {
+    width: 350px;
+    padding: 25px;
   }
+}
+
+@media screen and (max-width: 420px) {
 
   h1 {
     font-family: 'Kufam', cursive;
@@ -226,8 +240,8 @@ button:active {
     flex-direction: row;
     flex-wrap: wrap;
     width: 175px;
-    height: fit-content;
-    padding: 50px;
+    height: max-content;
+    padding: 25px;
     background-color: #eed3ee;
     border-radius: 25px;
   }
